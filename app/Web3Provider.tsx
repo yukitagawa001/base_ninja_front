@@ -4,10 +4,9 @@ import { WagmiProvider, createConfig, http } from "wagmi";
 import { mainnet } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
-import { ConnectKitButton } from "connectkit";
 import { ReactNode } from "react";
 import './main.css';
-import React, { createContext } from 'react';
+import React from 'react';
 
 
 const config = createConfig(

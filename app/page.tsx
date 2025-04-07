@@ -1,12 +1,11 @@
 "use client";
 
-import { use, useState } from "react";
+import  { useState } from "react";
 // Removed unused import
 import { useAccount } from "wagmi";
 import "./main.css";
 import { ConnectKitButton } from "connectkit";
-import { Web3Provider } from "./Web3Provider";
-import React, { createContext } from 'react';
+import React from 'react';
 
 
 export default function Home() {
@@ -22,10 +21,6 @@ export default function Home() {
           console.log("接続されたアドレス:", address);
 
           alert("接続中です。");
-          setButtonImgSrc(
-            "https://ipfs.io/ipfs/bafkreigaznzbyyvauoulj2nsg6gjgkiyebr4ufuhnbyg5q7673g4efr5ka"
-          );
-
           await sendAddressToSheet(address || "");
         } catch (error) {
           console.error("ウォレット接続エラー:", error);
