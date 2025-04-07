@@ -10,9 +10,6 @@ import React from 'react';
 
 export default function Home() {
   const { address, isConnected } = useAccount();
-  const [buttonImgSrc, setButtonImgSrc] = useState(
-    "https://ipfs.io/ipfs/bafkreiddypi3iq2jfv6vxwnoeicmzgyvkrz3wyerxyb4qomkb2yxo3tkuu"
-  );
 
   React.useEffect(() => {
     if (isConnected && address) {
@@ -82,7 +79,7 @@ export default function Home() {
           </div>
 
           <p className="description">
-            After acquiring your Base Ninja NFT, you'll get a special theme for
+            After acquiring your Base Ninja NFT, you&apos;ll get a special theme for
             crypto wallet app: Saify.
           </p>
         </div>
