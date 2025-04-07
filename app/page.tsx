@@ -1,6 +1,6 @@
 "use client";
 
-import  { useState } from "react";
+import  { useEffect } from "react";
 // Removed unused import
 import { useAccount } from "wagmi";
 import "./main.css";
@@ -11,7 +11,7 @@ import React from 'react';
 export default function Home() {
   const { address, isConnected } = useAccount();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isConnected && address) {
       (async () => {
         try {
